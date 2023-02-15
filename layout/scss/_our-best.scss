@@ -1,0 +1,13 @@
+.our-best{
+    min-height: 495px;
+    background: url('../img/our_best_bg.jpg') center (center / cover) no-repeat;
+    &__subtitle{
+        padding-top: 80px;
+    }
+    &__card-wrapper{
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        gap: 71px;
+    }
+}

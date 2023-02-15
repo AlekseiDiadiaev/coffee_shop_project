@@ -1,0 +1,27 @@
+.footer {
+    height: 150px;
+    &__nav {
+        padding-left: 45px;
+        padding-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+    }
+    &__nav>.nav__item{
+        color: black;
+        &:before{
+            background-color: #000;
+            top: 22px;
+        }
+    }
+    &__coffee-icon {
+        margin-top: 30px;
+        &:before{
+            background-color: #000;
+        }
+        &:after{ 
+            background-color: #000;
+        }
+    }
+
+}
