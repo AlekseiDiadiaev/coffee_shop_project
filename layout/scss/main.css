@@ -59,6 +59,9 @@ a {
   text-decoration: none;
   color: black; }
 
+body {
+  margin: 0; }
+
 .container {
   width: 1140px;
   margin: 0 auto; }
