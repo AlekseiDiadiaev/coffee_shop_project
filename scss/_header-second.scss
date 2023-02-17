@@ -1,0 +1,37 @@
+
+.header-second {
+    height: 260px;
+    width: 100%;
+    background: url('../img/header_second.jpg') center (center / cover) no-repeat;
+    padding: 30px;
+    @media (max-width: 575.98px) {
+        & {
+            height: 200px;
+        }
+    } 
+
+
+    &__nav {
+        @media (max-width: 767.98px) {
+            &{
+                padding-left: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: end;
+            }
+        } 
+    }
+    &__title {
+        margin-top: 60px;  
+        @media (max-width: 575.98px) {
+            & {
+                margin-top: 38px;  
+            }
+        } 
+    }
+    
+    &_for-your-pleasure {
+        background: url('../img/header_second_2.jpg') center (center / cover) no-repeat;
+    }
+}
+

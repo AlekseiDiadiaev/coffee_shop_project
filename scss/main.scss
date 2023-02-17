@@ -1,11 +1,16 @@
-
+@import 'normalize.';
 @import '_variables';
 @import '_header-main';
+@import '_card';
 @import '_style';
 @import '_about-us';
 @import '_our-best';
-@import '_card';
-@import '_footer.';
+@import '_footer';
+@import '_header-second';
+@import '_about-our';
+@import '_filter-panel';
+@import '_card-field';
+@import '_about-it';
 
 // @media (max-width: 1199.98px) {}
 // @media (max-width: 991.98px) {}
