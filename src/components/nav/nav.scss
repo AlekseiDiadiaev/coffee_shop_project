@@ -1,0 +1,35 @@
+@import '../variables/variables';
+
+.nav {
+   
+    &__item {
+        margin-right: 40px;
+        color: $text-color;
+        position: relative;
+
+        @media (max-width: 767.98px) { 
+            & {
+                font-size: 14px;
+                margin-right: 20px;
+            }
+        }
+
+        &:before{
+            transition: all 0.5s;
+            content: '';
+            position: absolute;
+            top: 25px;
+            left: 1px;
+            display: block;
+            width: 0%;
+            height: 2px;
+            background-color: #fff;
+            border-radius: 1px;
+        }
+        @media (hover: hover) {
+            &:hover:before{
+                width: 100%;
+            }
+        }
+    }
+}
