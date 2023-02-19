@@ -1,17 +1,19 @@
 
 import './card.scss';
 
-function Card({name, country, price, inlineStyle, imgUrl, modClass}) {
+function Card(props) {
+    const {name, country, price, imgUrl, modClass, showCard} = props;
     const clazz = `${modClass}__card card`
-    let countryRow = '';
-    if(country) {
-        countryRow = `<div class="card__country">${country}</div>`
-    } 
+   
+    function onShowCard (e) {     
+         showCard(e.currentTarget, props)     
+    }
+
     return (
-        <div className={clazz} style={inlineStyle}>
+        <div className={clazz}  onClick={onShowCard}>
             <img src={imgUrl} alt="card" className="card__img"/>
             <div className="card__name">{name}</div>
-            {countryRow}
+            <div className="card__country">{country}</div>
             <div className="card__price">{price}</div>      
         </div>
     );

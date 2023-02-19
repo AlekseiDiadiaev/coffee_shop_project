@@ -1,0 +1,97 @@
+@import '../variables/variables';
+
+.filter-panel {
+    padding: 60px 0 30px 0;
+    @media (max-width: 575.98px) {
+        padding: 30px 0 0 0;
+    } 
+    & .container{
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        @media (max-width: 767.98px) {
+            &{
+                gap: 0px;
+            }
+        } 
+
+        @media (max-width: 575.98px) {
+            flex-wrap: wrap;
+            gap: 15px;
+        } 
+    }
+
+    &__search-text {
+        margin-right: 20px;
+        @media (max-width: 767.98px) {
+            &{
+                font-size: 14px;
+                margin-right: 5px;
+            }
+        } 
+    }
+
+    &__search-input {
+        width: 180px;
+        height: 30px;
+        background: #FFFFFF;
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+        border: none;
+        padding-bottom: 5px; 
+        @media (max-width: 767.98px) {
+            &{
+                width: 120px;
+            }
+        } 
+        &::placeholder{
+            font-weight: 400;
+            font-size: 12px;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.5);
+            
+
+        }
+    }
+
+    &__filter-text {
+        margin-right: 35px;
+        @media (max-width: 767.98px) {
+            &{
+                font-size: 14px;
+                margin: 0 5px 0 15px ;
+            }
+        } 
+        @media (max-width: 575.98px) {
+            margin: 0 5px 0 5px ;
+        } 
+    }
+    &__filter-tab {
+        width: 75px;
+        height: 30px;
+        background: #FFFFFF;
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+        border: none;
+        font-size: 12px;
+        text-align: center;
+
+        &:nth-child(2) {
+            border-radius: 4px 0px 0px 4px;
+        }
+    
+        &:last-child {
+            border-radius: 0px 4px 4px 0px;
+        }
+        @media (hover: hover) {
+            &:hover{
+                background: $btn-hover-text-color;
+                color: #FFFFFF;
+            }
+        }
+        @media (max-width: 575.98px) {
+            padding: 0 2px ;
+            width: 65px;
+        } 
+    }
+    
+}

@@ -1,0 +1,248 @@
+@import '../variables/variables';
+
+.about-our {
+    min-height: 485px;
+    padding: 45px 0 5px 0;
+    position: relative;
+    @media (max-width: 767.98px) {
+        &{
+            padding: 10px 0 20px 0;
+            min-height: 400px;
+        }
+    }
+    
+    @media (max-width: 575.98px) {
+        & {
+            min-height: 300px;
+        }
+    } 
+    & .container {
+        display: flex;
+        justify-content: center;
+    }
+
+   
+    &__img  {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        max-width: 50%;
+        @media (max-width: 767.98px) {
+            &{
+                width: 50%;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            & {
+                justify-content: center;
+            }
+        } 
+        
+        @media (max-width: 575.98px) {
+            & {
+                display: none;
+            }
+        } 
+
+        & img{
+            display: block;
+            @media (max-width: 767.98px) {
+                &{
+                    width: auto;
+                    height: 80%;
+                }
+            }
+            
+        }
+    }
+
+    &__description-wrapper {
+        width: 40%;
+    }
+
+    &__description {
+        width: 350px;
+        @media (max-width: 767.98px) {
+            &{
+                width: 50%;
+            }
+        }
+        @media (max-width: 575.98px) {
+            & {
+                width: 90%;
+            }
+        } 
+    }
+
+    &__subtitle {
+        padding-top: 50px;
+        
+        @media (max-width: 767.98px) {
+            &{
+                padding-top: 40px;
+            }
+        }
+    }
+
+    &__coffee-icon{
+        &:before{
+            background-color: #000;
+        }
+        &:after{ 
+            background-color: #000;
+        }
+    }
+    &__content {
+        margin: 26px 0 0 0;
+        width: 345px;
+        text-align: center;
+        font-size: 14px;
+        line-height: 20px;
+        
+        @media (max-width: 767.98px) {
+            &{
+                width: 90%;
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            & {
+                width: 100%;
+            }
+        } 
+
+        
+    }
+    &:before {
+        content:'';
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 240px;
+        height: 0px;
+        border: 1px solid #000000;
+    }
+}
+
+
+.about-it {
+    min-height: 405px;
+    padding: 45px 0 5px 0;
+    position: relative;
+    @media (max-width: 767.98px) {
+        &{
+            padding: 0;
+            min-height: 350px;
+        }
+    }
+    
+    @media (max-width: 575.98px) {
+        & {
+            min-height: 300px;
+        }
+    } 
+    & .container {
+        display: flex;
+        justify-content: center;
+    }
+
+   
+    &__img  {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        max-width: 50%;
+        @media (max-width: 767.98px) {
+            &{
+                width: 50%;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            & {
+                justify-content: center;
+            }
+        } 
+        
+        @media (max-width: 575.98px) {
+            & {
+                display: none;
+            }
+        } 
+
+        & img{
+            display: block;
+            @media (max-width: 767.98px) {
+                &{
+                    width: auto;
+                    height: 70%;
+                }
+            }
+            
+        }
+    }
+
+    &__description-wrapper {
+        width: 40%;
+        @media (max-width: 575.98px) {
+            width: 95%;
+        } 
+    }
+
+    &__description {
+        width: 350px;
+        @media (max-width: 767.98px) {
+            &{
+                width: 50%;
+            }
+        }
+        @media (max-width: 575.98px) {
+            & {
+                width: 90%;
+            }
+        } 
+    }
+
+    &__subtitle {
+        padding-top: 50px;
+        
+        @media (max-width: 767.98px) {
+            &{
+                padding-top: 40px;
+            }
+        }
+    }
+
+    &__coffee-icon{
+        &:before{
+            background-color: #000;
+        }
+        &:after{ 
+            background-color: #000;
+        }
+    }
+    &__content {
+        margin: 20px auto 0;
+        width: 420px;
+        text-align: left;
+        font-size: 14px;
+        line-height: 20px;
+        @media (max-width: 767.98px) {
+            &{
+                width: 90%;
+                font-size: 12px;
+            }
+        }
+        @media (max-width: 575.98px) {
+            & {
+                width: 100%;
+            }
+        } 
+    }
+    &__price span {
+        font-size: 24px;
+    }
+}
