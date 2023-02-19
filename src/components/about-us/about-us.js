@@ -1,14 +1,13 @@
 
 import './about-us.scss';
+import CoffeeIcon from '../coffee-icon/coffee-icon';
 
 function AboutUs({inlineStyle}) {
     return (
         <section className="about-us" style={inlineStyle}>
             <div className="container">
                 <h2 className="about-us__subtitle subtitle">About Us</h2>
-                <div className="about-us__icon coffee-icon">
-                    <img src="./ico/coffee_black.svg" alt="icon coffee" ></img>
-                </div>
+                <CoffeeIcon modClass='about-us' imgUrl="./ico/coffee_black.svg"/>
                 <p className="about-us__content">
                     Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
                     Afraid at highly months do things on at. Situation recommend objection do intention

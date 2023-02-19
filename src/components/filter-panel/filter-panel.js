@@ -2,10 +2,28 @@ import './filter-panel.scss';
 
 
 
-function FilterPanel ({search}) {
+function FilterPanel ({search, filter}) {
+
     function onSearch(e) {
         search(e.target.value)
     }
+
+    function onFilter(e) {
+        const btns = document.querySelectorAll('.filter-panel__filter-tab')
+        if (e.target.classList.contains('active')) {
+            search('');
+            btns.forEach(item => {
+                item.classList.remove('active')
+            })
+        } else {
+            btns.forEach(item => {
+                item.classList.remove('active')
+            })
+            e.target.classList.add('active')
+            search(e.target.getAttribute('data-country'))
+        }
+    }
+
     return (
         <div className="filter-panel">
                 <div className="container"> 
@@ -20,9 +38,9 @@ function FilterPanel ({search}) {
                     </div>
                     <div className="filter-panel__filter-wrap">
                         <span className="filter-panel__filter-text">Or filter</span>
-                        <button className="filter-panel__filter-tab">Brazil</button>
-                        <button className="filter-panel__filter-tab">Kenya</button>
-                        <button className="filter-panel__filter-tab">Columbia</button>
+                        <button className="filter-panel__filter-tab" data-country="Brazil" onClick={(e) => onFilter(e)}>Brazil</button>
+                        <button className="filter-panel__filter-tab" data-country="Kenya" onClick={(e) => onFilter(e)}>Kenya</button>
+                        <button className="filter-panel__filter-tab" data-country="Columbia" onClick={(e) => onFilter(e)}>Columbia</button>
                     </div>
                 </div>
             </div>

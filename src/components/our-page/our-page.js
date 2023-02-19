@@ -19,11 +19,14 @@ class OurPage extends Component   {
         })})
     }
 
-
+    filter = (country) => {
+        this.setState({
+            data: this.props.data.filter(item => item.country === country)
+        })
+    }
     render() {
         const {changePage, fieldOrCard, cardData, showCard} = this.props;
         const {data} = this.state
-        console.log(data)
         let currentPage;
         
         if (fieldOrCard === 'field'){
@@ -34,7 +37,7 @@ class OurPage extends Component   {
                     title='About our beans'
                     fieldOrCard={fieldOrCard}
                 /> 
-                <FilterPanel search={this.search}/>
+                <FilterPanel search={this.search} filter={this.filter}/>
                 <CardField data={data} showCard={showCard}/>
             </main>);
         } if (fieldOrCard === 'card'){
@@ -58,38 +61,4 @@ class OurPage extends Component   {
     }
 }   
 
-/* function OurPage ({changePage, data, fieldOrCard, cardData, showCard}) {
-    let currentPage;
-    
-    if (fieldOrCard === 'field'){
-        currentPage = (
-        <main>    
-            <AboutOur 
-                urlImg='./img/women_drink.jpg'
-                title='About our beans'
-                fieldOrCard={fieldOrCard}
-            /> 
-            <FilterPanel/>
-            <CardField data={data} showCard={showCard}/>
-        </main>);
-    } if (fieldOrCard === 'card'){
-        currentPage = (
-        <main>    
-            <AboutOur 
-                cardData={cardData}
-                urlImg={cardData.bigImgUrl}
-                title={cardData.name}
-                fieldOrCard={fieldOrCard}
-            /> 
-        </main>);
-    }
-
-    return (
-        <div>
-            <HeaderSecond changePage={changePage} bgselector=''/> 
-            {currentPage}
-        </div>
-    );
-  } */
-  
   export default OurPage;

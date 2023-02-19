@@ -4,7 +4,6 @@ import Card from '../card/card';
 
 
 function CardField ({data, showCard}) {
-    /* console.log(data) */
     const countCards = data.length < 7 ? data.length : 6;
     const cards = [];
     for(let i = 0; i < countCards; i++){

@@ -7,7 +7,6 @@ function Nav({inlineStyle, modClass, changePage, imgUrl}) {
   function onChangePage (e)  {
     e.preventDefault();
     const pageLink = e.target.getAttribute('data-link');
-    console.log(pageLink)
     changePage(pageLink);
   } 
 
