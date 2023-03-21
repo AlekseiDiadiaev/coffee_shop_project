@@ -2,11 +2,12 @@
 .header-second {
     height: 260px;
     width: 100%;
-    background: url('../../../public/img/header_second.jpg') center (center / cover) no-repeat;
+    background: url('../../resources/img/header_second.jpg') center (center / cover) no-repeat;
     padding: 30px;
     @media (max-width: 575.98px) {
         & {
             height: 200px;
+            padding: 30px 5px 30px 5px;
         }
     } 
 
@@ -20,6 +21,11 @@
                 align-items: flex-end;
             }
         } 
+        @media (max-width: 575.98px) {
+            &{
+                padding-left: 0;
+            }
+        } 
     }
     &__title {
         margin-top: 60px;  
@@ -31,7 +37,7 @@
     }
     
     &_for-your-pleasure {
-        background: url('../../../public/img/header_second_2.jpg') center (center / cover) no-repeat;
+        background: url('../../resources/img/header_second_2.jpg') center (center / cover) no-repeat;
     }
 }
 

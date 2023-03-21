@@ -1,15 +1,15 @@
 import './header-second.scss';
 
 import Nav from '../nav/nav';
-
-function HeaderSecond({changePage, bgselector}) {
+import navIco from '../../resources/ico/nav_coffee.svg';
+function HeaderSecond({ bgselector, title}) {
     const clazz = `header-second header-second${bgselector}`
 	return (
     <header className={clazz}>
         <div className="container">
-            <Nav modClassName='header-second' changePage={changePage} imgUrl="./ico/nav_coffee.svg"/>
+            <Nav modClass='header-second' imgUrl={navIco}/>
             <h1 className="header-second__title title">
-                Our Coffee
+                {title}
             </h1>
         </div>
     </header>  

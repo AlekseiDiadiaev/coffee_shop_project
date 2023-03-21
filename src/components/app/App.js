@@ -2,59 +2,50 @@ import './app.scss';
 
 import HomePage from '../home-page/home-page';
 import OurPage from '../our-page/our-page';
-import ForYourPleaseure from '../for-your-pleasure/for-your-pleasure';
+import ForYourPleasure from '../for-your-pleasure/for-your-pleasure';
 import Footer from '../footer/footer';
 import { Component } from 'react';
- 
+import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import imgCard1 from '../../resources/img/card_1.jpg'
+import imgCard2 from '../../resources/img/card_2.jpg'
+import imgCard2Big from '../../resources/img/card_2_big.jpg'
+import imgCard3 from '../../resources/img/card_3.jpg'
+import imgAromistico from '../../resources/img/aromistico.jpg'
 
 class App extends Component  {
     constructor (props){
         super(props)
         this.state = {
             data: [
-                {name: "Solimo Coffee Beans 2 kg", country:"Columbia", price:"10.73$", imgUrl:"./img/card_1.jpg", bigImgUrl:"./img/aromistico.jpg", description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", key:"1", countSales: "1000"},
-                {name: "AROMISTICO Coffee 1 kg", country:"Brazil", price:"6.99$", imgUrl:"./img/card_3.jpg", bigImgUrl:"./img/aromistico.jpg", description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", key:"2", countSales: "5"},
-                {name: "AROMISTICO Coffee 1 kg", country:"Brazil", price:"6.99$", imgUrl:"./img/card_3.jpg", bigImgUrl:"./img/aromistico.jpg", description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", key:"3", countSales: "568"},
-                {name: "AROMISTICO Coffee 1 kg", country:"Brazil", price:"6.99$", imgUrl:"./img/card_3.jpg", bigImgUrl:"./img/aromistico.jpg", description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", key:"4", countSales: "45"},
-                {name: "AROMISTICO Coffee 1 kg", country:"Brazil", price:"6.99$", imgUrl:"./img/card_3.jpg", bigImgUrl:"./img/aromistico.jpg", description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", key:"5", countSales: "7"},
-                {name: "AROMISTICO Coffee 1 kg", country:"Brazil", price:"6.99$", imgUrl:"./img/card_3.jpg", bigImgUrl:"./img/aromistico.jpg", description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", key:"6", countSales: "328"},
-                {name: "AROMISTICO Coffee 1 kg", country:"Brazil", price:"6.99$", imgUrl:"./img/card_3.jpg", bigImgUrl:"./img/aromistico.jpg", description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", key:"7", countSales: "56"},
-                {name: "Presto Coffee Beans 1 kg", country:"Kenya", price:"6.99$", imgUrl:"./img/card_2.jpg", bigImgUrl:"./img/aromistico.jpg", description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", key:"8", countSales: "896"},
-                {name: "AROMISTICO Coffee 1 kg", country:"Brazil", price:"6.99$", imgUrl:"./img/card_3.jpg", bigImgUrl:"./img/aromistico.jpg", description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", key:"9", countSales: "43"},   
-            ],
-            page: '',
+                {name: "Solimo Coffee Beans 2 kg", country:"Kenya", price:"10.73$", imgUrl: imgCard3, bigImgUrl: imgCard1, description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", id:"1", countSales: "1000"},
+                {name: "AROMISTICO Coffee 1 kg", country:"Brazil", price:"6.99$", imgUrl: imgAromistico, bigImgUrl: imgAromistico, description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", id:"2", countSales: "5"},
+                {name: "AROMISTICO Coffee 1 kg", country:"Brazil", price:"6.99$", imgUrl: imgAromistico, bigImgUrl: imgAromistico, description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", id:"3", countSales: "568"},
+                {name: "Presto Coffee Beans 1 kg", country:"Columbia", price:"8.99$", imgUrl: imgCard2, bigImgUrl: imgCard2Big, description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", id:"4", countSales: "45"},
+                {name: "AROMISTICO Coffee 1 kg", country:"Brazil", price:"6.99$", imgUrl: imgAromistico, bigImgUrl: imgAromistico, description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", id:"5", countSales: "7"},
+                {name: "Presto Coffee Beans 1 kg", country:"Columbia", price:"8.99$", imgUrl: imgCard2, bigImgUrl: imgCard2Big, description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", id:"6", countSales: "328"},
+                {name: "AROMISTICO Coffee 1 kg", country:"Brazil", price:"6.99$", imgUrl: imgAromistico, bigImgUrl: imgAromistico, description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", id:"7", countSales: "56"},
+                {name: "Solimo Coffee Beans 2 kg", country:"Kenya", price:"10.73$", imgUrl: imgCard3, bigImgUrl: imgCard1, description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", id:"8", countSales: "896"},
+                {name: "AROMISTICO Coffee 1 kg", country:"Brazil", price:"6.99$", imgUrl: imgAromistico, bigImgUrl: imgAromistico, description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", id:"9", countSales: "43"},   
+            ]
         }
-    }
-
-    changePage = (pageLink) => {
-        if (pageLink === 'home') {
-            this.setState({page: <HomePage changePage={this.changePage} data={this.state.data} showCard={this.showCard}/>})
-        }  
-        if (pageLink === 'our') {
-            this.setState({page: <OurPage changePage={this.changePage} data={this.state.data} showCard={this.showCard} fieldOrCard='field'/> })
-        }  
-        if (pageLink === 'for_your') {
-            this.setState({page: <ForYourPleaseure changePage={this.changePage} showCard={this.showCard} data={this.state.data} fieldOrCard='field'/>})
-        }
-    }
-
-    showCard = (target, cardData) => {
-        this.setState({page: <OurPage changePage={this.changePage} data={this.state.data} cardData={cardData} fieldOrCard='card'/> })
-    }
-
-    componentDidMount() {       
-            this.setState({page: <HomePage changePage={this.changePage} data={this.state.data} showCard={this.showCard}/>});
     }
 
     render () {    
         
         return (
-            <div>
-                {this.state.page}
+            <BrowserRouter>
+                    <Routes>
+                        <Route path="/coffee_shop_project" element={<HomePage data={this.state.data}/>}/>
+                        <Route path="/coffee_shop_project/our_page" element={<OurPage data={this.state.data}  fieldOrCard='field'/>}/>
+                        <Route path="/coffee_shop_project/our_page/:id" element={<OurPage data={this.state.data} /* cardData={cardData} */ fieldOrCard='card'/>}/>
+                        <Route path="/coffee_shop_project/for_your" element={<ForYourPleasure showCard={this.showCard} data={this.state.data} fieldOrCard='field'/>}/>
+                    </Routes>
                 <Footer changePage={this.changePage}/>   
-            </div>
+            </BrowserRouter>
         );
     }
 }
 
 export default App;
+
+

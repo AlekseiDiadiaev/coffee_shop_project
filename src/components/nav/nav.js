@@ -1,23 +1,22 @@
 
 import './nav.scss';
+import { NavLink, Link } from 'react-router-dom'
 
-function Nav({inlineStyle, modClass, changePage, imgUrl}) {
+function Nav({inlineStyle, modClass, imgUrl}) {
   const clazz = `${modClass}__nav nav`;
 
-  function onChangePage (e)  {
-    e.preventDefault();
-    const pageLink = e.target.getAttribute('data-link');
-    changePage(pageLink);
-  } 
+  function activeStyle({isActive}) {
+    return isActive ? "nav__item nav__item_active" : "nav__item";
+  }
 
   return (
         <nav className={clazz} style={inlineStyle}>
-            <a href="/" className="nav__ico" data-link="home" onClick={(e) => onChangePage(e)}>
-                <img src={imgUrl} data-link="home" alt="icon coffee"/>
-            </a>
-            <a href="/" className="nav__item" data-link="home" onClick={(e) => onChangePage(e)}>Coffee house</a>
-            <a href="/" className="nav__item" data-link="our" onClick={(e) => onChangePage(e)}>Our coffee</a>
-            <a href="/" className="nav__item" data-link="for_your" onClick={(e) => onChangePage(e)}>For your pleasure</a>
+            <Link to="/coffee_shop_project" className="nav__ico">
+                <img src={imgUrl} alt="icon coffee"/>
+            </Link>
+            <NavLink end to="/coffee_shop_project" className={activeStyle} >Coffee house</NavLink>
+            <NavLink to="/coffee_shop_project/our_page" className={activeStyle}>Our coffee</NavLink>
+            <NavLink end to="/coffee_shop_project/for_your" className={activeStyle}>For your pleasure</NavLink>
         </nav>
   );
 }

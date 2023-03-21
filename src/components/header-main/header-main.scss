@@ -3,7 +3,7 @@
 .header-main {
     height: 640px;
     width: 100%;
-    background: url('../../../public/img/header_main.jpg') center (center / cover) no-repeat;
+    background: url('../../resources/img/header_main.jpg') center (center / cover) no-repeat;
     padding: 30px;
 
     @media (max-width: 767.98px) {
@@ -15,6 +15,7 @@
     @media (max-width: 575.98px) {
         &{
             height: 400px;
+            padding: 30px 5px 30px 5px;
         }
     } 
 
@@ -26,6 +27,11 @@
                 display: flex;
                 justify-content: center;
                 align-items: flex-end;
+            }
+        } 
+        @media (max-width: 575.98px) {
+            &{
+                padding-left: 0;
             }
         } 
     }

@@ -3,8 +3,8 @@ import './card-field.scss';
 import Card from '../card/card';
 
 
-function CardField ({data, showCard}) {
-    const countCards = data.length < 7 ? data.length : 6;
+function CardField ({data}) {
+    const countCards = data.length;
     const cards = [];
     for(let i = 0; i < countCards; i++){
         cards.push(<Card 
@@ -12,11 +12,11 @@ function CardField ({data, showCard}) {
             price={data[i]['price']} 
             modClass='card-field'
             imgUrl={data[i]['imgUrl']} 
-            key={data[i]['key']} 
+            key={data[i]['id']} 
             bigImgUrl={data[i]['bigImgUrl']} 
             country={data[i]['country']} 
             description={data[i]['description']}
-            showCard={showCard} 
+            id={data[i]['id']} 
         />)
     }
     return (

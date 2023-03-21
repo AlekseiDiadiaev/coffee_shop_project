@@ -2,10 +2,10 @@ import HeaderMain from '../header-main/header-main';
 import OurBest from '../our-best/our-best';
 import AboutUs from '../about-us/about-us';
 
-function HomePage ({changePage, data, showCard}) {
+function HomePage ({data, showCard}) {
     return (
         <div>
-            <HeaderMain changePage={changePage}/> 
+            <HeaderMain/> 
             <main>
             <AboutUs /> 
             <OurBest data={data} showCard={showCard}/>    

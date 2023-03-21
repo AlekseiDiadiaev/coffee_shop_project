@@ -76,7 +76,7 @@
     }
 
     &__subtitle {
-        padding-top: 50px;
+        padding-top: 25px;
         
         @media (max-width: 767.98px) {
             &{
@@ -131,7 +131,7 @@
 
 .about-it {
     min-height: 405px;
-    padding: 45px 0 5px 0;
+    padding: 30px 0 5px 0;
     position: relative;
     @media (max-width: 767.98px) {
         &{
@@ -152,6 +152,7 @@
 
    
     &__img  {
+        padding: 20px;
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -176,6 +177,8 @@
 
         & img{
             display: block;
+            width: 100%;
+            max-height: 390px;
             @media (max-width: 767.98px) {
                 &{
                     width: auto;

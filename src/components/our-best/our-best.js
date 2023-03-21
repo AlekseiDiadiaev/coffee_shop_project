@@ -6,8 +6,6 @@ function OurBest({data, showCard}) {
     const dataSortBySales = [...data].sort((a, b) => b.countSales - a.countSales) 
     const cards = [];
 
-    
-
     for(let i = 0; i < 3; i++){
         cards.push(<Card 
             name={dataSortBySales[i]['name']} 
@@ -16,9 +14,10 @@ function OurBest({data, showCard}) {
             imgUrl={dataSortBySales[i]['imgUrl']} 
             bigImgUrl={dataSortBySales[i]['bigImgUrl']} 
             description={dataSortBySales[i]['description']} 
-            key={dataSortBySales[i]['key']} 
+            key={dataSortBySales[i]['id']} 
             country={dataSortBySales[i]['country']}
             showCard={showCard}
+            id={dataSortBySales[i]['id']} 
         />)
     }
     

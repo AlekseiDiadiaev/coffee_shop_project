@@ -1,13 +1,15 @@
 import './footer.scss';
+import navIcoBlack from '../../resources/ico/nav_coffee_black.svg'
+import icoBlack from '../../resources/ico/coffee_black.svg'
 
 import CoffeeIcon from '../coffee-icon/coffee-icon';
 import Nav from '../nav/nav';
-function Footer({changePage}) {
+function Footer() {
     return (
         <footer className="footer">
             <div className="container">
-                <Nav changePage={changePage} modClass="footer" imgUrl="./ico/nav_coffee_black.svg"/>
-                <CoffeeIcon modClass='footer' imgUrl="./ico/coffee_black.svg"/>
+                <Nav modClass="footer" imgUrl={navIcoBlack}/>
+                <CoffeeIcon modClass='footer' imgUrl={icoBlack}/>
             </div>
         </footer>
     );

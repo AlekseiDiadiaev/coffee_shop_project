@@ -1,6 +1,7 @@
 
 import './about-our.scss';
 import CoffeeIcon from '../coffee-icon/coffee-icon';
+import icoBlack from '../../resources/ico/coffee_black.svg'
 
 function AboutOur({urlImg, title, fieldOrCard, cardData}) {
     let description;
@@ -13,19 +14,12 @@ function AboutOur({urlImg, title, fieldOrCard, cardData}) {
                 </div>
                 <div className="about-our__description">
                     <h2 className="about-our__subtitle subtitle">{title}</h2>
-                        <CoffeeIcon modClass='about-our' imgUrl="./ico/coffee_black.svg"/>
+                        <CoffeeIcon modClass='about-our' imgUrl={icoBlack}/>
                     <div className="about-our__content">
-                        Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
-                         <br/><br/>
-                        Afraid at highly months do things on at. Situation recommend objection do intention
-                        <br/>
-                        so questions. 
-                        <br/>
-                        As greatly removed calling pleased improve an. Last ask him cold feel
-                        <br/>
-                        met spot shy want. Children me laughing we prospect answered followed. At it went
-                        <br/>
-                        is song that held help face.
+                    Looking for the perfect cup of coffee? Look no further than our coffee shop! <br/> <br/>
+                    Our extensive catalog features a wide selection of premium coffee blends, from rich and bold to smooth and mellow. <br/> <br/>
+                    We offer both ground and whole bean options, so you can enjoy the perfect cup of coffee no matter how you like to brew it. <br/><br/>
+                    Browse our catalog today and find your new favorite coffee blend!
                     </div>
                 </div>
             </div>
@@ -39,7 +33,7 @@ function AboutOur({urlImg, title, fieldOrCard, cardData}) {
                 <div className="about-it__description-wrapper">
                     <div className="about-it">
                         <h2 className="about-it__subtitle subtitle">{title}</h2>
-                            <CoffeeIcon modClass='about-it' imgUrl="./ico/coffee_black.svg"/>
+                            <CoffeeIcon modClass='about-it' imgUrl={icoBlack}/>
                         <div className="about-it__content">
                             <p className="about-it__country"><b>Country:</b> {cardData.country}</p>
                             <p className="about-it__discription"><b>Description:</b>Description: {cardData.description}</p>
