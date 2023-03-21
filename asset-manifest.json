@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/coffee_shop_project/static/css/main.0ac5eb8f.css",
+    "main.js": "/coffee_shop_project/static/js/main.79e863b6.js",
+    "static/media/our_best_bg.jpg": "/coffee_shop_project/static/media/our_best_bg.da32bdf984471a93ab53.jpg",
+    "static/media/header_main.jpg": "/coffee_shop_project/static/media/header_main.a5ff4f3c5c02c3e27138.jpg",
+    "static/media/header_second.jpg": "/coffee_shop_project/static/media/header_second.e8094fc787f35d4856eb.jpg",
+    "static/media/header_second_2.jpg": "/coffee_shop_project/static/media/header_second_2.291949b24ac3631a2ea8.jpg",
+    "static/media/aromistico.jpg": "/coffee_shop_project/static/media/aromistico.ca37a7e1a91fa817a123.jpg",
+    "static/media/card_1.jpg": "/coffee_shop_project/static/media/card_1.ffc8a93801c3b488c47c.jpg",
+    "static/media/women_drink.jpg": "/coffee_shop_project/static/media/women_drink.b51853dec5764eae4163.jpg",
+    "static/media/card_2_big.jpg": "/coffee_shop_project/static/media/card_2_big.cfb64f981c1d276fdab2.jpg",
+    "static/media/cup_steams.jpg": "/coffee_shop_project/static/media/cup_steams.ae49f177399e0a170c45.jpg",
+    "static/media/card_3.jpg": "/coffee_shop_project/static/media/card_3.b3676b98fa2f089e093b.jpg",
+    "static/media/nav_coffee_black.svg": "/coffee_shop_project/static/media/nav_coffee_black.b203ac4aa243222ebe7fda99b2c78a55.svg",
+    "static/media/card_2.jpg": "/coffee_shop_project/static/media/card_2.61a7fe8524bc38bca7b1.jpg",
+    "static/media/nav_coffee.svg": "/coffee_shop_project/static/media/nav_coffee.fd1d28fc1928a6b6b501ed3820bb60e3.svg",
+    "static/media/coffee_white.svg": "/coffee_shop_project/static/media/coffee_white.44f497501e5a11a919ad526ccedfe140.svg",
+    "static/media/coffee_black.svg": "/coffee_shop_project/static/media/coffee_black.6495e102f339fea011d73109cd7ebe54.svg",
+    "index.html": "/coffee_shop_project/index.html",
+    "main.0ac5eb8f.css.map": "/coffee_shop_project/static/css/main.0ac5eb8f.css.map",
+    "main.79e863b6.js.map": "/coffee_shop_project/static/js/main.79e863b6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0ac5eb8f.css",
+    "static/js/main.79e863b6.js"
+  ]
+}
